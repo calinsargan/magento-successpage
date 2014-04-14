@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Copimaj_SuccessPage>
+            <version>0.1.0</version>
+        </Copimaj_SuccessPage>
+    </modules>
+    <frontend>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <!-- Overwrite onepage checkout controller -->
+                        <Copimaj_SuccessPage before="Mage_Checkout">Copimaj_SuccessPage</Copimaj_SuccessPage>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+    </frontend>
+</config>
