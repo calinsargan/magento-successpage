@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addJs"><script>copimaj/jquery/jquery.js</script></action>
+			<action method="addJs"><script>copimaj/jquery/jquery.ui.js</script></action>
+			<action method="addJs"><script>copimaj/jquery/jquery.cookie.js</script></action>
+			<action method="addCss"><name>css/copimaj/popup-newsletter.css</name><params>media="all"</params></action>
+		</reference>
+		<reference name="after_body_start">
+			<block type="popup/popup" name="cookie.popup" template="copimaj/popup/newsletter.phtml" />
+		</reference>
+	</default>
+</layout>

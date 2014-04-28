@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Copimaj_PopupNewsletter>
+            <version>0.2.0</version>
+        </Copimaj_PopupNewsletter>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <popup>
+                    <file>copimaj-popup.xml</file>
+                </popup>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <helpers>
+            <popup>
+                <class>Copimaj_PopupNewsletter_Helper</class>
+            </popup>
+        </helpers>
+        <blocks>
+            <popup>
+                <class>Copimaj_PopupNewsletter_Block</class>
+            </popup>
+        </blocks>
+    </global>
+</config>
