@@ -21,15 +21,21 @@ class Copimaj_SuccessPage_OnepageController extends Mage_Checkout_OnepageControl
         //     $this->_redirect('checkout/cart');
         //     return;
         // }
+        $lastOrder = Mage::getModel('sales/order')->getCollection()
+           ->setOrder('entity_id','DESC')
+           ->setPageSize(1)
+           ->getFirstItem();
 
-        $lastQuoteId = $session->getLastQuoteId();
-        $lastOrderId = $session->getLastOrderId();
-        $lastRecurringProfiles = $session->getLastRecurringProfileIds();
+
+        $lastQuoteId = $lastOrder->getQuoteId();
+        $lastOrderId = $lastOrder->getId();
+        // $lastRecurringProfiles = $session->getLastRecurringProfileIds();
         // if (!$lastQuoteId || (!$lastOrderId && empty($lastRecurringProfiles))) {
         //     $this->_redirect('checkout/cart');
         //     return;
         // }
-
+        
+        
         // $session->clear();
         $this->loadLayout();
         $this->_initLayoutMessages('checkout/session');
